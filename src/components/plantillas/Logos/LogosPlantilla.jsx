@@ -280,7 +280,7 @@ const LogosPlantilla = () => {
                   name={"nombre"}
                   erros={errors}
                   id={"nombre"}
-                  placeholder={t("ingreseNombreLogo")}
+                  placeholder={t("ingreseNombreLogo" )}
                   type={"text"}
                 />
                 <InputAtomo
