@@ -11,11 +11,15 @@ import Tbody from '../../molecules/table/Tbody';
 import Td from '../../atoms/Td';
 import { pdf } from "@react-pdf/renderer";
 import FacturaAlquile from '../../organismo/Reportes/FacturaAlquiler';
+import { useTranslation } from 'react-i18next';
+
+
 const FacturasAlquiler = () => {
     const { register, handleSubmit, formState: { errors } } = useForm();
     const [dataFactura, seDatafactura] = useState([])
     const [datos, setDatos] = useState([]);
     const [generaFacturaAlquiler, { isLoading, data, isSuccess, error, isError }] = useGeneraFacturaAlquilerMutation();
+    const {t}= useTranslation()
 
     useEffect(() => {
         if (isSuccess) {
@@ -54,10 +58,10 @@ const FacturasAlquiler = () => {
                     <div className="w-full justify-center items-center flex-row flex gap-4">
                         <div className="w-[250px]">
 
-                            <InputAtomo erros={errors} name={"Documento"} register={register} type={"number"} placeholder={"Numero de Documento"} />
+                            <InputAtomo erros={errors} name={"Documento"} register={register} type={"number"} placeholder={t("buscarDocumento")} />
                         </div>
                         <Mybutton color={"primary"} type={"submit"}>
-                            Buscar Factura
+                        {t("buscarFactura")}
                         </Mybutton>
                     </div>
                     {

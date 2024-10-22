@@ -106,7 +106,7 @@ const FacturasPlantilla = () => {
           </Mybutton>
           <div>
 
-            <Search label={""} placeholder={"Buscar..."} onchange={(e) => setSerch(e.target.value)} />
+            <Search label={""} placeholder={t("buscar")} onchange={(e) => setSerch(e.target.value)} />
           </div>
 
         </div>

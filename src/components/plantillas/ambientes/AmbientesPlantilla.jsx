@@ -298,7 +298,7 @@ const AmbientesPlantilla = () => {
             className="flex flex-col items-center"
           >
             <h2 className="text-2xl font-bold mb-4 text-center">
-              {ambienteSeleccionado ? "Actualizar ambiente" : t("Nuevo ambiente")}
+              {ambienteSeleccionado ? t("Actualizar ambiente") : t("Nuevo ambiente")}
             </h2>
             <div className="w-full max-w-xs">
               <InputAtomo
@@ -312,7 +312,7 @@ const AmbientesPlantilla = () => {
             </div>
             <div className="flex justify-center mt-6">
               <Mybutton type="submit" color="primary">
-                {ambienteSeleccionado ? "Actualizar" : t("registrar")}
+                {ambienteSeleccionado ? t("actualizar") : t("registrar")}
               </Mybutton>
             </div>
           </form>

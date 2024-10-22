@@ -154,14 +154,28 @@
     "generarreporteexcel": "Generate report EXCEL",
     "reporteservicios": "Service Report",
     "facturaalquiler": "Rent invoice",
-    "registrarVariable": "Register new variable",
+    "registrarVariable": "Register variable",
     "Nuevo ambiente":"New Classroom",
+    "Actualizar ambiente":"Update Classroom",
     "Nombre del ambiente":"Name Classroom",
     "Filtro por ambiente":"Filter for Classroom",
     "Nuevo Precio":"New price",
+    "Actualizar Precio":"Update  price",
     "Presentacion":"Presentation",
     "Precio":"Price",
     "Ingrese el precio":"Enter price",
-    "buscar precio":"Search price"
+    "buscar precio":"Search price",
+    "buscarMuestra": "Search sample",
+    "codigoMuestra": "Sample code",
+    "buscarDocumento":"Document Number",
+    "buscarFactura":"Search invoice",
+    "reportPDF": "Report by type of service and Sample",
+    "SelectService": "Select a type of service",
+    "generarReport": "Generate Report",
+    "generarExcel":"Generate Excel Report",
+    "fechaInicio": "Start Date",
+    "fechaFin": "End Date",
+    "obtenerData": "Getting data"
+
 
 }

@@ -159,7 +159,7 @@ const VariablesPlantilla = () => {
         <div className="flex items-center mb-2 w-full max-w-[550px]">
           <Search
             label={""}
-            placeholder={"Buscar..."}
+            placeholder={t("buscar")}
             onchange={(e) => setSearchTerm(e.target.value)}
           />
         </div>
@@ -175,7 +175,7 @@ const VariablesPlantilla = () => {
 
       {showModal && (
         <ModalOrganismo
-          title={"Registrar Nueva Variable"}
+          title={t("registrarVariable")}
           visible={showModal}
           closeModal={closemodal}
         >
