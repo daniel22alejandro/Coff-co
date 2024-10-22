@@ -138,7 +138,7 @@ const VariablesFormulario = ({ closeModal, dataValue }) => {
         </div>
         <div className="flex w-[230px]  flex-col ">
           <Mybutton type={"onsubmit"} color={"primary"}>
-            {dataValue ? "Actualizar" : "Registrar"}
+            {dataValue ? t("actualizar") : t("registrar")}
           </Mybutton>
         </div>
       </form>
