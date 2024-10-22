@@ -99,12 +99,12 @@ const TipoServicioPlantilla = () => {
           (
             <>
               <Mybutton color="primary" onClick={handleModal}>
-                Nuevo
+              {t("nuevo")}
               </Mybutton>
             </>
           )
         }
-        <Search label={""} onchange={(e) => setBuscar(e.target.value)} placeholder={"Buscar..."} />
+        <Search label={""} onchange={(e) => setBuscar(e.target.value)} placeholder={t("buscar")} />
       </div>
       {showModal && (
         <ModalOrganismo

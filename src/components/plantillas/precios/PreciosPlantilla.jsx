@@ -344,7 +344,7 @@ const PreciosPlantilla = () => {
             className="flex flex-col items-center"
           >
             <h2 className="text-2xl font-bold mb-4 text-center">
-              {precioSeleccionado ? "Actualizar Precio" : "Nuevo Precio"}
+              {precioSeleccionado ? t("Actualizar Precio") : t("Nuevo Precio")}
             </h2>
             <div className="flex flex-col py-6 gap-2">
               <InputAtomo
@@ -389,7 +389,7 @@ const PreciosPlantilla = () => {
             </div>
             <div className="flex justify-center mt-6">
               <Mybutton color={"primary"} type="submit">
-                {precioSeleccionado ? "Actualizar" : t('registrar')}
+                {precioSeleccionado ? t("actualizar") : t('registrar')}
               </Mybutton>
             </div>
           </form>

@@ -104,7 +104,7 @@ const TipoDocumentoPlantilla = () => {
             </>
           )
         }
-        <Search label={""} onchange={(e) => setBuscar(e.target.value)} placeholder={"Buscar..."} />
+        <Search label={""} onchange={(e) => setBuscar(e.target.value)} placeholder={t("buscar")} />
 
       </div>
       {showModal && (

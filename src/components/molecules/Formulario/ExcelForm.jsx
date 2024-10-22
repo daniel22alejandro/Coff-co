@@ -7,6 +7,7 @@ import InputAtomo from '../../atoms/Input';
 import { useForm } from "react-hook-form";
 import { generateExcel } from '../../organismo/Reportes/ReporteExcel';
 import { toast } from 'react-toastify';
+import { useTranslation } from 'react-i18next';
 
 const ReporteExcel = () => {
   const [postExcel, { isLoading, isError, error }] = usePostExcelMutation();
@@ -14,6 +15,7 @@ const ReporteExcel = () => {
   const { register, handleSubmit, setValue, watch, formState: { errors } } = useForm();
   const [excelData, setExcelData] = useState(null);
   const [logos, setLogos] = useState([]);
+  const { t } = useTranslation();
 
   const processLogos = useCallback((data) => {
     if (data && data.length > 0) {
@@ -57,12 +59,12 @@ const ReporteExcel = () => {
 
   return (
     <div className="p-4">
-      <h2 className="text-xl font-bold mb-4">Generar Reporte Excel</h2>
+      <h2 className="text-xl font-bold mb-4">{t("generarExcel")}</h2>
       <form onSubmit={handleSubmit(onSubmit)} className="mb-4">
         <div className="mb-3">
           <SelectAtomo
             data={tiposServicio}
-            label="Tipo de Servicio"
+            label={t  ("tipoServicios")}
             onChange={(e) => setValue('idTipoServicio', e.target.value)}
             items="idTipoServicio"
             ValueItem="nombreServicio"
@@ -73,7 +75,7 @@ const ReporteExcel = () => {
         <div className="mb-3">
           <InputAtomo
             type="date"
-            placeholder="Fecha Inicio"
+            placeholder={t("fechaInicio")}
             id="fechaInicio"
             name="fechaInicio"
             erros={errors}
@@ -84,7 +86,7 @@ const ReporteExcel = () => {
         <div className="mb-3">
           <InputAtomo
             type="date"
-            placeholder="Fecha Fin"
+            placeholder={t("fechaFin")}
             id="fechaFin"
             name="fechaFin"
             erros={errors}
@@ -93,7 +95,7 @@ const ReporteExcel = () => {
           />
         </div>
         <Button type="submit" color="primary" disabled={isLoading}>
-          {isLoading ? 'Generando...' : 'Obtener Datos'}
+          {isLoading ? 'Generando...' : t('obtenerData')}
         </Button>
       </form>
 

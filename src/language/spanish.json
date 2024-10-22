@@ -18,7 +18,7 @@
     "nombre": "Nombre",
     "graficaDoscumento": "Grafica de Documentos",
     "errorGrafica": "No hay datos para graficar",
-    "Codigo": "Codigo",
+    "Codigo": "Código",
     "Version": "verision",
     "FechaVersion": "Fecha de Version",
     "FechaEmision": "Fecha Emision",
@@ -126,7 +126,29 @@
      "generarreporteexcel": "Generar reporte EXCEL",
      "reporteservicios": "Reporte de Servicios",
      "facturaalquiler": "Factura Alquiler",
-     "registrarVariable": "Registrar nueva variable"
+     "registrarVariable": "Registrar variable",
+     "buscarMuestra": "Buscar muestra",
+     "codigoMuestra": "Código Muestra",
+     "Nuevo Precio":"New price",
+     "Actualizar Precio":"Actualizar Precio",
+     "Nuevo ambiente":"Nuevo ambiente",
+     "Actualizar ambiente":"Actualizar ambiente",
+     "buscarDocumento":"Número de Documento",
+     "buscarFactura":"Buscar factura",
+     "reportPDF": "Reporte segun tipo servicio y Muestra",
+     "SelectService": "Seleccione un tipo de servicio",
+     "generarReport": "Generar Reporte",
+     "generarExcel":"Generar Reporte Excel",
+     "fechaInicio": "Start Date",
+     "fechaFin": "End Date",
+     "obtenerData": "Obtener datos"
+
+
+
+
+
+
+
 
 
 
