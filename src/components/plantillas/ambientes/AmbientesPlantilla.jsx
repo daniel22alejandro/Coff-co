@@ -196,7 +196,7 @@ const AmbientesPlantilla = () => {
   return (
     <>
       <div className="w-auto h-screen flex flex-col gap-8 bg-gray-100">
-        <div className="pt-10 pl-20">
+        <div className="pt-10 pl-20 justify-around flex flex-wrap items-center">
           {
             rol === "administrador" && (
               <>

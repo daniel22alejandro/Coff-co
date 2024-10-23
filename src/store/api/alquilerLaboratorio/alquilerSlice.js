@@ -15,7 +15,10 @@ export const AlquilerSlice=createApi({
         getAlquiler:build.query({
             query:()=>({
                 url:'alquiler/listar',
-                method:'GET'
+                method:'GET',
+                headers: {
+                    token: `${getCookie("Token")}`,
+                  },
             }),
             providesTags:['alquiler']
         }),
@@ -26,6 +29,9 @@ export const AlquilerSlice=createApi({
                 url:'alquiler/registrar',
                 method:'POST',
                 body:data,
+                headers: {
+                    token: `${getCookie("Token")}`,
+                  },
             }),
             transformErrorResponse:(response,meta,arg)=>{
                 return{
@@ -41,6 +47,9 @@ export const AlquilerSlice=createApi({
             query:()=>({
                 url:'alquiler/listarus',
                 method: 'GET',
+                headers: {
+                    token: `${getCookie("Token")}`,
+                  },
             }),
             providesTags:['alquiler']
         }),
@@ -51,6 +60,9 @@ export const AlquilerSlice=createApi({
                 url:`alquiler/actualizar/${data.id}`,
                 method:'PUT',
                 body:data,
+                headers: {
+                    token: `${getCookie("Token")}`,
+                  },
             }),
             transformErrorResponse:(response,meta,arg)=>{
                 return{
@@ -66,6 +78,9 @@ export const AlquilerSlice=createApi({
             query:(id)=>({
                 url:`alquiler/eliminar/${id}`,
                 method:'DELETE',
+                headers: {
+                    token: `${getCookie("Token")}`,
+                  },
             }),
             transformErrorResponse:(response,meta,arg)=>{
                 return{

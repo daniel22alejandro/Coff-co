@@ -62,7 +62,7 @@ const PreciosPlantilla = () => {
     formState: { errors },
     setValue,
   } = useForm();
-  console.log(dataPrecio)
+ 
   const filteredData =
     dataPrecio && dataPrecio.length > 0
       ? dataPrecio.filter((item) => {
@@ -90,7 +90,7 @@ const PreciosPlantilla = () => {
       <Spinner className="flex justify-center items-center h-screen bg-gray-100" />
     );
   }
-  console.log(UnidadMedida)
+ 
   const abrirModal = (precio) => {
 
     if (precio) {

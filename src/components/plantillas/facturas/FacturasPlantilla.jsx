@@ -86,6 +86,7 @@ const FacturasPlantilla = () => {
   const closeModal = () => {
     setShowModal(false);
   }
+
   return (
     <section className="w-full mt-5 gap-4 flex flex-wrap flex-col">
       <h2 className="text-2xl px-20  font-bold">{t("facturas")}</h2>
