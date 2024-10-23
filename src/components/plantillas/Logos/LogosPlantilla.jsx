@@ -52,6 +52,7 @@ const LogosPlantilla = () => {
 
     //MODAL 
     const {handleSubmit, register, formState: { errors }, reset} = useForm();
+    const {handleSubmit: handleSubmitRegistro, register: registerRegistro, formState: { errors: errorsRegistro }, reset: resetRegistro } = useForm();
 
     //Abrir modal
     const [openModal, setOpenModal] = useState(false);
@@ -61,7 +62,7 @@ const LogosPlantilla = () => {
 
     //MODAL REGISTRAR
     const handleClick = () => {setOpenModal(true);};
-    const closeModal = () => {setOpenModal(false);reset()};
+    const closeModal = () => {setOpenModal(false);resetRegistro()};
 
     //MODAL ACTUALIZAR
     const [logoSeleccionado, setLogoSeleccionado] = useState(null);
@@ -128,7 +129,7 @@ const LogosPlantilla = () => {
           },
           icon: <FcOk />,
         });
-        setOpenModal(false);
+        closeModal();
       } catch (error) {
         console.error("Error:", error);
         toast.error(error.error || "Ocurrió un error", {
@@ -139,7 +140,7 @@ const LogosPlantilla = () => {
             color: "#fff",
           },
         });
-        setOpenModal(false);
+        closeModal();
       }
     };
     
@@ -272,13 +273,13 @@ const LogosPlantilla = () => {
           logo={<Logosímbolo />}
           children={
             <UserFrom
-              onsubmit={handleSubmit(onsubmit)}
+              onsubmit={handleSubmitRegistro(onsubmit)}
               children={
                 <>
                   <InputAtomo
-                  register={register}
+                  register={registerRegistro}
                   name={"nombre"}
-                  erros={errors}
+                  erros={errorsRegistro}
                   id={"nombre"}
                   placeholder={t("ingreseNombreLogo" )}
                   type={"text"}
@@ -286,9 +287,9 @@ const LogosPlantilla = () => {
                 <InputAtomo
                  IsRequired={false}
                  required={false}
-                  register={register}
+                  register={registerRegistro}
                   name={"file"}
-                  erros={errors}
+                  erros={errorsRegistro}
                   id={"file"}
                   placeholder={t("seleccionaTuLogo")}
                   type={"file"}
