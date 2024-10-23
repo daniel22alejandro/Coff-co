@@ -44,7 +44,7 @@ console.log(data)
   return (
     <>
       <div className="w-auto h-screen  flex flex-col gap-8 bg-gray-100">
-        <Search label={""} onchange={(e) => setfiltro(e.target.value)} placeholder={"Buscar..."}/>
+        <Search label={""} onchange={(e) => setfiltro(e.target.value)} placeholder={t("buscar")}/>
         <div className="w-full px-20 h-auto overflow-y-auto">
           <TableMolecula>
             <Thead>

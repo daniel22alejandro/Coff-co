@@ -15,6 +15,9 @@ export const logosApi = createApi({
             query: () => ({
                 url: "logo/listar",
                 method: "GET",
+                headers: {
+                    token: `${getCookie("Token")}`,
+                },
             }),
             providesTags: ['logos']
         }),
@@ -25,6 +28,9 @@ export const logosApi = createApi({
                 url: '/logo/registrar',
                 method: 'POST',
                 body: data,
+                headers: {
+                    token: `${getCookie("Token")}`,
+                },
             }),
             transformErrorResponse: (response, meta, arg) => {
                 return {
@@ -41,6 +47,9 @@ export const logosApi = createApi({
                 url: `/logo/actualizar/${id}`,
                 method: 'PUT',
                 body: data,
+                headers: {
+                    token: `${getCookie("Token")}`,
+                },
             }),
             transformErrorResponse: (response, meta, arg) => {
                 console.log("Respuesta completa de error:", response);
@@ -58,6 +67,9 @@ export const logosApi = createApi({
             query: (id) => ({
                 url: `logo/estado/${id}`,
                 method: 'PUT',
+                headers: {
+                    token: `${getCookie("Token")}`,
+                },
             }),
             transformErrorResponse: (response, meta, arg) => {
                 console.log("Respuesta completa de error:", response);
@@ -72,6 +84,9 @@ export const logosApi = createApi({
             query: () => ({
                 url: "logo/listaActivos",
                 method: "GET",
+                headers: {
+                    token: `${getCookie("Token")}`,
+                },
             }),
             transformErrorResponse: (response, meta, arg) => {
                 return {

@@ -92,7 +92,7 @@ const MuestrasPlantilla = () => {
   const DataArrayPaginacion = filteredData
     ? filteredData?.slice(inicial, final)
     : [];
-console.log(numeroPagina)
+
   const handleEdit = (muestra) => {
     setDatosDelFormulario(muestra);
     setShowModal(true);
@@ -146,8 +146,8 @@ console.log(numeroPagina)
 
         <div className="ml-auto">
           <Search
-            label={"buscar Muestra"}
-            placeholder={"Código Muestra"}
+            label={t("buscarMuestra")}
+            placeholder={t("codigoMuestra")}
             onchange={(e) => setSearchTerm(e.target.value)}
           />
         </div>

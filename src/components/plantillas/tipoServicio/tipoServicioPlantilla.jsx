@@ -93,18 +93,18 @@ const TipoServicioPlantilla = () => {
   return (
     <section className="w-full mt-5 gap-4 flex flex-wrap flex-col">
       <h2 className="text-2xl px-20 font-bold">{t("tipoServicios")}</h2>
-      <div className="px-20">
+      <div className="px-20 flex flex-wrap justify-around items-center">
         {
           rol === "administrador" &&
           (
             <>
               <Mybutton color="primary" onClick={handleModal}>
-                Nuevo
+              {t("nuevo")}
               </Mybutton>
             </>
           )
         }
-        <Search label={""} onchange={(e) => setBuscar(e.target.value)} placeholder={"Buscar..."} />
+        <Search label={""} onchange={(e) => setBuscar(e.target.value)} placeholder={t("buscar")} />
       </div>
       {showModal && (
         <ModalOrganismo

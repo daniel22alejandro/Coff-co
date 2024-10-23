@@ -56,19 +56,19 @@ const ReportesPlantillas = () => {
         {
           <ModalOrganismo visible={show} closeModal={() => setShow(false)}>
             <form onSubmit={handleSubmit(handleReporte)} className='flex  flex-col justify-center items-center'>
-              <label className=' font-sans font-medium'>Reporte segun tipo servicio y Muestra</label>
+              <label className=' font-sans font-medium'>{t("reportPDF")}</label>
 
               <div className='w-[320px] flex flex-col mt-4 gap-5 justify-center items-center'>
 
                 <SelectDocumentos
-                  label={"Selecione el Tipo de servicio"}
+                  label={t("SelectService")}
                   data={tipoServicio}
                   onChange={(e) => SetTipoServicio(e.target.value)}
                   items={"idTipoServicio"}
                   ValueItem={"nombreServicio"}
                 />
-                <InputAtomo register={register} name={"muestra"} erros={errors} placeholder={"Codigo Muestra"} type={"text"} id={"muestra"} />
-                <Mybutton color={""} type={"submit"}>Generar Reporte</Mybutton>
+                <InputAtomo register={register} name={"muestra"} erros={errors} placeholder={t("codigoMuestra")} type={"text"} id={"muestra"} />
+                <Mybutton color={""} type={"submit"}>{t("generarReport")}</Mybutton>
               </div>
               <div className='w-full  justify-center flex flex-col'>
 

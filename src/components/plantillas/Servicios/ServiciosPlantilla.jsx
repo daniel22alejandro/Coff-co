@@ -26,20 +26,21 @@ const ServiciosPlantilla = () => {
   return (
     <>
       <div className="w-auto h-screen  flex flex-col gap-8 bg-gray-100">
-        <div className="pt-10 pl-20 justify-center flex items-center">
-          <div className="pt-10 pl-20">
+        <div className="pt-10 pl-20 justify-center flex  flex-row items-center">
+          
             <Mybutton
               color={"primary"}
               onClick={() => abrirModalRegistro(null)}
             >
               <b>{t('Nuevo servicio')}</b>
             </Mybutton>
-          </div>
-          <Search
+            <Search
             label={t('Filtro')}
             placeholder={t("Filtro por muestra...")}
             onchange={(e) => setFiltro(e.target.value)}
           />
+        
+          
         </div>
         <MostrarServicios filtro={filtro} />
         <RegistrarServicio

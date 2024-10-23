@@ -30,6 +30,9 @@ export const preciosSlice = createApi({
                 url:'precio/registrar',
                 method:'POST',
                 body:data,
+                headers: {
+                    token: `${getCookie("Token")}`,
+                  },
             }),
             transformErrorResponse:(response,meta,arg)=>{
                 return{

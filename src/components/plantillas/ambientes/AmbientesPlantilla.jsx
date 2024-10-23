@@ -196,7 +196,7 @@ const AmbientesPlantilla = () => {
   return (
     <>
       <div className="w-auto h-screen flex flex-col gap-8 bg-gray-100">
-        <div className="pt-10 pl-20">
+        <div className="pt-10 pl-20 justify-around flex flex-wrap items-center">
           {
             rol === "administrador" && (
               <>
@@ -298,7 +298,7 @@ const AmbientesPlantilla = () => {
             className="flex flex-col items-center"
           >
             <h2 className="text-2xl font-bold mb-4 text-center">
-              {ambienteSeleccionado ? "Actualizar ambiente" : t("Nuevo ambiente")}
+              {ambienteSeleccionado ? t("Actualizar ambiente") : t("Nuevo ambiente")}
             </h2>
             <div className="w-full max-w-xs">
               <InputAtomo
@@ -312,7 +312,7 @@ const AmbientesPlantilla = () => {
             </div>
             <div className="flex justify-center mt-6">
               <Mybutton type="submit" color="primary">
-                {ambienteSeleccionado ? "Actualizar" : t("registrar")}
+                {ambienteSeleccionado ? t("actualizar") : t("registrar")}
               </Mybutton>
             </div>
           </form>

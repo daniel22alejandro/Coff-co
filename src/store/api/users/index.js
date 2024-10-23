@@ -18,6 +18,9 @@ export const usuariosSlice = createApi({
     query:()=>({
       url:'/usuario/listar',
       method:'GET',
+      headers: {
+        token: `${getCookie("Token")}`,
+      },
     }),
     providesTags:['usuarios']
   }),
@@ -27,6 +30,9 @@ export const usuariosSlice = createApi({
     query:()=>({
       url:'/usuario/listarroles',
       method:'GET',
+      headers: {
+        token: `${getCookie("Token")}`,
+      },
     }),
     invalidatesTags:['usuarios'],
     providesTags:['usuarios']
@@ -117,6 +123,9 @@ export const usuariosSlice = createApi({
         url: `/usuario/actualizar/${id}`,
         method: 'PUT',
         body: data,
+        headers: {
+          token: `${getCookie("Token")}`,
+        },
       }),
       transformErrorResponse: (response, meta, arg) => {
         console.log("Respuesta completa de error:", response);
@@ -133,6 +142,9 @@ export const usuariosSlice = createApi({
       query: (id) => ({
         url: `usuario/estado/${id}`,
         method: 'PUT',
+        headers: {
+          token: `${getCookie("Token")}`,
+        },
       }),
       transformErrorResponse: (response, meta, arg) => {
         console.log("Respuesta completa de error:", response);
@@ -150,6 +162,9 @@ export const usuariosSlice = createApi({
         url: `usuario/contra/${id}`,
         method: 'PUT',
         body: data,
+        headers: {
+          token: `${getCookie("Token")}`,
+        },
       }),
       transformErrorResponse: (response, meta, arg) => {
         console.log("Respuesta completa de error:", response);
@@ -166,6 +181,9 @@ export const usuariosSlice = createApi({
     query:(id)=>({
       url:`/usuario/eliminar/${id}`,
       method:'DELETE',
+      headers: {
+        token: `${getCookie("Token")}`,
+      },
     }),
     transformErrorResponse:(response,meta,arg)=>{
       return{
