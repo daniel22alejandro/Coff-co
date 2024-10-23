@@ -85,6 +85,9 @@ export const TipoServicioApi = createApi({
                     url: `tipoServicio/validarTiposervicio`,
                     method: "POST",
                     body: data,
+                    headers: {
+                        token: `${getCookie("Token")}`,
+                    },
 
                 }),
             invalidatesTags: ["TipoServicio"],
@@ -94,7 +97,9 @@ export const TipoServicioApi = createApi({
                 {
                     url: `tipoServicio/listarActivo`,
                     method: "GET",
-                   
+                    headers: {
+                        token: `${getCookie("Token")}`,
+                    },
 
                 }),
             invalidatesTags: ["TipoServicio"],

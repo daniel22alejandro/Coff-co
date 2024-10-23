@@ -17,6 +17,9 @@ export const facturasApi = createApi({
                 url: "facturas/generar",
                 method: "POST",
                 body: data,
+                headers: {
+                    token: `${getCookie("Token")}`,
+                  },
             }),
             providesTags: ["Facturas"],
         }),
@@ -25,6 +28,9 @@ export const facturasApi = createApi({
                 url: "facturas/alquiler",
                 method: "POST",
                 body: data,
+                headers: {
+                    token: `${getCookie("Token")}`,
+                  },
             }),
             transformErrorResponse: (response, arg) => {
                 return {

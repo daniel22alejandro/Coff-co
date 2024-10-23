@@ -13,7 +13,7 @@ export const AuthProvider = ({ children }) => {
   // Función para iniciar sesión y guardar los datos tanto en el estado como en la cookie
   const iniciarSesion = (data) => {
     setAuthData(data);  
-    console.table("Datos enviados al contexto:", JSON.stringify(data, null, 2));
+
     Cookies.set('UsuarioContext', JSON.stringify(data), { expires: 1 }); 
   };
 
@@ -27,7 +27,7 @@ export const AuthProvider = ({ children }) => {
 
   useEffect(() => {
     // Ver los datos guardados en el contexto cada vez que authData cambia
-    console.log("Datos guardados en el contexto de Autentificación:", authData);
+   
   }, [authData]);
 
   return (

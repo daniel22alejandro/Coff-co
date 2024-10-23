@@ -8,7 +8,7 @@ import { useGetTipoDocumentosQuery } from '../../../store/api/TipoDocumentos';
 import Label from '../../atoms/Label';
 import { useGetTipoServicioQuery } from '../../../store/api/TipoServicio';
 import CheckboxAtomo from '../../atoms/CheckboxAtomo';
-import { useGetLogosQuery } from '../../../store/api/logos';
+import { useLogosActivosQuery } from '../../../store/api/logos';
 import { useActualizarDocumentoMutation } from '../../../store/api/documentos';
 import { toast } from "react-toastify";
 import { useEffect, useState } from 'react';
@@ -23,7 +23,7 @@ const DocumentoEdit = ({ valor, closeModalEdit }) => {
     const [servicio, setTipoServicio] = useState('')
     const { register, handleSubmit, formState: { errors }, reset, setValue } = useForm()
     const { data, isLoading, isError, error } = useGetTipoDocumentosQuery();
-    const { data: datalogos, isLoading: loandingLogos, } = useGetLogosQuery();
+    const { data: datalogos, isLoading: loandingLogos, } = useLogosActivosQuery();
     const { data: varibles, isLoading: LoandVariables, isError: ErrorVariable, error: Error } = useGetVariableActivasQuery();
     const { data: TpoServicio, isLoading: TipoServicio, isError: tipoServicioError, error: ErroTipo } = useGetTipoServicioQuery();
     const [actualizarVersion, { isLoading: loandActualizar, isError: isErrorActualizar, error: ErrorActualizar,
@@ -147,6 +147,7 @@ const DocumentoEdit = ({ valor, closeModalEdit }) => {
                     <div className='flex w-[230px] h-[155px] flex-col'>
                         <CheckboxAtomo
                             value={valor?.logos}
+                            disable={true}
                             data={datalogos.data}
                             items={"nombre"}
                             valor={"idLogos"}

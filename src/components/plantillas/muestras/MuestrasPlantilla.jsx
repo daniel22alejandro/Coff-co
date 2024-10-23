@@ -92,7 +92,7 @@ const MuestrasPlantilla = () => {
   const DataArrayPaginacion = filteredData
     ? filteredData?.slice(inicial, final)
     : [];
-console.log(numeroPagina)
+
   const handleEdit = (muestra) => {
     setDatosDelFormulario(muestra);
     setShowModal(true);

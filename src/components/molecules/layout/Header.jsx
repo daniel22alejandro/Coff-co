@@ -79,9 +79,9 @@ const Header = ({ color }) => {
                             /> |
                         </figure>
                        
-                        <figure className="h-16 w-16 ml-1 flex items-center justify-between">
+                        <figure className="h-16 w-18 ml-1 flex items-center justify-between">
                             <LazyLoadImage
-                                src={"/logotics.png"}
+                                src={"/logotics.jpeg"}
                                 className="h-14 w-full cursor-pointer"
                                 effect="opacity"
                                 alt="logo-sena"

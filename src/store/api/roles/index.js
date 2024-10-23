@@ -18,6 +18,9 @@ export const rolesSlice = createApi({
     query:()=>({
       url:'/rol/listar',
       method:'GET',
+      headers: {
+        token: `${getCookie("Token")}`,
+      },
     }),
     invalidatesTags:['roles'],
     providesTags:['roles']

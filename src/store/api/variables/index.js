@@ -55,6 +55,9 @@ export const VariablesApi = createApi({
         url: `variables/actualizar/${data.id}`,
         method: "PUT",
         body: data,
+        headers: {
+          token: `${getCookie("Token")}`,
+      },
       }),
       transformErrorResponse: (response, meta, arg) => {
         return {
@@ -69,6 +72,9 @@ export const VariablesApi = createApi({
         url: `variables/estado/${data.id}`,
         method: "PUT",
         body: data,
+        headers: {
+          token: `${getCookie("Token")}`,
+      },
       }),
 
       invalidatesTags: ["Variable"],
@@ -78,6 +84,9 @@ export const VariablesApi = createApi({
       query: (id) => ({
         url: `variables/eliminar/${id}`,
         method: "DELETE",
+        headers: {
+          token: `${getCookie("Token")}`,
+      },
       }),
       transformErrorResponse: (response, meta, arg) => {
         return {
